@@ -1,0 +1,54 @@
+name: "Propose an experiment"
+description: "Document a human-governed, falsifiable ORION research experiment."
+title: "[Experiment] "
+labels: ["experiment"]
+body:
+  - type: markdown
+    attributes:
+      value: "PUBLIC research proposal. Nothing submitted here directly runs code, controls devices, or authorizes spending. Do not post confidential information."
+  - type: input
+    id: objective
+    attributes:
+      label: "Goal / question"
+      placeholder: "What are we actually trying to determine?"
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: "Hypothesis"
+      description: "What result do you predict? What would falsify it?"
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: "Method / test"
+      description: "What repeatable steps or simulation would you use?"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Evidence and acceptance criteria"
+      description: "What would be measured, recorded, and verified?"
+    validations:
+      required: true
+  - type: dropdown
+    id: permissions
+    attributes:
+      label: "Risk and authorization scope"
+      options:
+        - "Idea only — no actions requested"
+        - "Read-only software investigation proposed"
+        - "Simulation-only experiment proposed"
+        - "Physical or consequential action — separate human approval required"
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: "Governance confirmation"
+      options:
+        - label: "I understand this proposal does not authorize any action on another person's devices."
+          required: true

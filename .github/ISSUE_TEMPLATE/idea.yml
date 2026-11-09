@@ -1,0 +1,37 @@
+name: "Share an idea"
+description: "Bring a question or design concept to the ORION public research room."
+title: "[Idea] "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: "This issue is PUBLIC. Do not include secrets, private device links, personal addresses, credentials, or someone else's private data. Submitting an idea does not authorize computer access or automated actions."
+  - type: textarea
+    id: intent
+    attributes:
+      label: "The idea / original word"
+      description: "What are you imagining or trying to understand?"
+      placeholder: "I wonder whether..."
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: "Why it matters"
+      description: "What problem would this solve, and for whom?"
+    validations:
+      required: true
+  - type: textarea
+    id: first-test
+    attributes:
+      label: "One possible test"
+      description: "What observation or demonstration would move this idea forward?"
+    validations:
+      required: false
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: "Public contribution confirmation"
+      options:
+        - label: "I understand this is public and does not grant computer or machine-control permission."
+          required: true

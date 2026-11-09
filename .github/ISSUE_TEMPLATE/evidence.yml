@@ -1,0 +1,43 @@
+name: "Share an observation or result"
+description: "Submit a dated test result, failure, screenshot link, or correction with evidence."
+title: "[Evidence] "
+labels: ["evidence"]
+body:
+  - type: markdown
+    attributes:
+      value: "This report is PUBLIC. Share only material you have permission to share. Do not post sensitive information, remote-control links, or credentials."
+  - type: textarea
+    id: experiment
+    attributes:
+      label: "What was actually tested?"
+      description: "Link to an experiment issue when available."
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: "Direct observations / measurements"
+      description: "Include measurements, units, time and method; distinguish evidence from assumptions."
+    validations:
+      required: true
+  - type: textarea
+    id: limitations
+    attributes:
+      label: "Limitations / uncertainty"
+      description: "What did the test not prove?"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence-link
+    attributes:
+      label: "Public evidence links (optional)"
+      description: "Only links you are authorized to publish."
+    validations:
+      required: false
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: "Publication confirmation"
+      options:
+        - label: "I have permission to share these details publicly."
+          required: true
